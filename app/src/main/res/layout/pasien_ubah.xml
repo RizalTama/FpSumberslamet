@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="10dp"
+    android:orientation="vertical"
+    tools:context=".Dokter_ubah">
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Ubah Pasien"
+        android:textSize="20dp"
+        android:layout_gravity="center"
+        android:layout_marginBottom="30dp"
+        android:textColor="#59BA5D"></TextView>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Nama Pasien"
+        android:textColor="#333333"
+        android:layout_marginBottom="5dp"></TextView>
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/edt_namapasien"
+        android:hint="Masukkan Nama Pasien"
+        android:layout_marginBottom="10dp"
+        android:backgroundTint="#59BA5D"></EditText>
+
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Keluhan"
+        android:textColor="#333333"
+        android:layout_marginBottom="5dp"></TextView>
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/edt_keluhan"
+        android:hint="Masukkan Keluhan Pasien"
+        android:layout_marginBottom="10dp"
+        android:backgroundTint="#59BA5D"></EditText>
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Simpan"
+        android:id="@+id/btn_simpan"
+        android:backgroundTint="#59BA5D"></Button>
+</LinearLayout>

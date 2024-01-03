@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:orientation="vertical"
+    android:layout_height="wrap_content"
+    android:gravity="center_horizontal"
+    android:layout_marginBottom="10dp">
+
+    <ImageView
+        android:layout_width="150dp"
+        android:layout_height="150dp"
+        android:id="@+id/iv_foto"
+        android:layout_gravity="center"
+        android:src="@drawable/noimage"></ImageView>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Nama Obat"
+        android:layout_gravity="center"
+        android:id="@+id/txt_namaobat"></TextView>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:gravity="center"
+        android:orientation="horizontal">
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/btn_hapus"
+            android:layout_marginRight="5dp"
+            android:text="Hapus"
+            android:backgroundTint="#EDDC021C"></Button>
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/btn_ubah"
+            android:layout_margin="10dp"
+            android:layout_marginRight="5dp"
+            android:text="Ubah"
+            android:backgroundTint="#D8C83E"></Button>
+
+    </LinearLayout>
+</LinearLayout>
