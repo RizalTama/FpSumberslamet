@@ -1,13 +1,19 @@
 package com.akademik.kampus
 
+import android.content.Context
 import android.content.Intent
 import android.database.sqlite.SQLiteDatabase
 import android.graphics.Bitmap
 import android.graphics.BitmapFactory
-import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.view.LayoutInflater
+import android.view.View
+import android.view.ViewGroup
 import android.widget.Button
 import android.widget.ImageButton
+import android.widget.ImageView
+import android.widget.TextView
+import androidx.appcompat.app.AppCompatActivity
 import androidx.recyclerview.widget.GridLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import java.io.ByteArrayInputStream
@@ -34,7 +40,7 @@ class Pasien : AppCompatActivity() {
                 val bis = ByteArrayInputStream(detail_pasien.getBlob(3))
                 val gambarbitmap:Bitmap = BitmapFactory.decodeStream(bis)
                 foto.add(gambarbitmap)
-            } catch (e:Exception) {
+            } catch (e: Exception) {
                 val gambarbitmap:Bitmap = BitmapFactory.decodeResource(this.resources,R.drawable.noimage)
                 foto.add(gambarbitmap)
             }
@@ -45,7 +51,7 @@ class Pasien : AppCompatActivity() {
 
         }
 
-        val mi = Dokter_item(this, id, nama, keluhan, foto)
+        val mi = Pasien_item(this, id, nama, keluhan, foto)
         rv_pasien.adapter=mi
         rv_pasien.layoutManager = GridLayoutManager(this, 2)
 
@@ -55,9 +61,10 @@ class Pasien : AppCompatActivity() {
             startActivity(pindah)
 
         }
+
         val ibDokter: ImageButton = findViewById(R.id.ib_dokter)
-        val ibObat: ImageButton = findViewById(R.id.ib_obat)
         val btn_pulang : Button =findViewById(R.id.btn_dashboard)
+        val ibObat: ImageButton = findViewById(R.id.ib_obat)
         val ibPasien: ImageButton = findViewById(R.id.ib_pasien)
 
         ibDokter.setOnClickListener {
@@ -71,10 +78,9 @@ class Pasien : AppCompatActivity() {
         ibPasien.setOnClickListener {
             startActivity(Intent(this, Pasien::class.java))
         }
+
         btn_pulang.setOnClickListener{
             startActivity(Intent(this,Dashboard::class.java))
         }
     }
 }
-
-

@@ -13,22 +13,20 @@
         android:theme="@style/Theme.Kampus"
         tools:targetApi="31">
         <activity
+            android:name=".Pasien_item"
+            android:exported="false" />
+        <activity
+            android:name=".Pasien_detail"
+            android:exported="false" />
+        <activity
             android:name=".Pasien_ubah"
             android:exported="false" />
         <activity
             android:name=".Pasien_tambah"
             android:exported="false" />
         <activity
-            android:name=".Pasien_item"
-            android:exported="false" />
-        <activity
             android:name=".Pasien_hapus"
             android:exported="false" />
-        <activity
-            android:name=".Pasiaen_hapus"
-            android:exported="false"
-            android:label="@string/title_activity_pasiaen_hapus"
-            android:theme="@style/Theme.Kampus" />
         <activity
             android:name=".Obat_ubah"
             android:exported="false" />
