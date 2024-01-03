@@ -27,11 +27,11 @@ class Pasien : AppCompatActivity() {
         val foto: MutableList<Bitmap> = mutableListOf();
 
         val dbfinalprojek: SQLiteDatabase = openOrCreateDatabase("finalprojek", MODE_PRIVATE, null)
-        val detail_dokter = dbfinalprojek.rawQuery("SELECT * FROM pasien", null)
+        val detail_pasien = dbfinalprojek.rawQuery("SELECT * FROM pasien", null)
 
-        while (detail_dokter.moveToNext()) {
+        while (detail_pasien.moveToNext()) {
             try {
-                val bis = ByteArrayInputStream(detail_dokter.getBlob(3))
+                val bis = ByteArrayInputStream(detail_pasien.getBlob(3))
                 val gambarbitmap:Bitmap = BitmapFactory.decodeStream(bis)
                 foto.add(gambarbitmap)
             } catch (e:Exception) {
@@ -39,9 +39,9 @@ class Pasien : AppCompatActivity() {
                 foto.add(gambarbitmap)
             }
 
-            id.add(detail_dokter.getString(0))
-            nama.add(detail_dokter.getString(1))
-            keluhan.add(detail_dokter.getString(2))
+            id.add(detail_pasien.getString(0))
+            nama.add(detail_pasien.getString(1))
+            keluhan.add(detail_pasien.getString(2))
 
         }
 

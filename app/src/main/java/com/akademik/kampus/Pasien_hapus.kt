@@ -11,12 +11,10 @@ class Pasien_hapus : AppCompatActivity() {
         setContentView(R.layout.pasien_hapus)
 
         val id_pasien_terpilih:String = intent.getStringExtra("id_pasien_terpilih").toString()
-
         val dbfinalprojek: SQLiteDatabase = openOrCreateDatabase("finalprojek", MODE_PRIVATE, null)
 
-        val query = dbfinalprojek.rawQuery("DELETE FROM pasien WHERE id_pasien='$id_pasien_terpilih'", null)
+        val query = dbfinalprojek.rawQuery("DELETE FROM pasien WHERE id_pasien ='$id_pasien_terpilih'", null)
         query.moveToNext()
-
         val pindah: Intent = Intent(this, Pasien::class.java )
         startActivity(pindah)
     }

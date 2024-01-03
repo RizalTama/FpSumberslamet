@@ -17,7 +17,7 @@ class Pasien_item (val ini:Context, val id:MutableList<String>, val nama:Mutable
         return ViewHolder(view)
     }
     class ViewHolder(ItemView: View) : RecyclerView.ViewHolder(ItemView) {
-        val txt_nama : TextView = itemView.findViewById(R.id.txt_nama)
+        val txt_nama : TextView = itemView.findViewById(R.id.txt_namapasien)
         val txt_keluhan : TextView = itemView.findViewById(R.id.txt_keluhan)
         val iv_foto : ImageView = itemView.findViewById(R.id.iv_foto)
         val btn_hapus:Button=ItemView.findViewById(R.id.btn_hapus)
@@ -33,15 +33,15 @@ class Pasien_item (val ini:Context, val id:MutableList<String>, val nama:Mutable
         holder.txt_keluhan.text = keluhan.get(position)
         holder.iv_foto.setImageBitmap(foto.get(position))
         holder.btn_hapus.setOnClickListener {
-            val id_dokter_terpilih:String = id.get(position)
+            val id_pasien_terpilih:String = id.get(position)
             val pindah:Intent = Intent(ini, Pasien_hapus::class.java)
-            pindah.putExtra("id_pasien_terpilih", id_dokter_terpilih)
+            pindah.putExtra("id_pasien_terpilih", id_pasien_terpilih)
             ini.startActivity(pindah)
         }
         holder.btn_ubah.setOnClickListener {
-            val id_dokter_terpilih:String = id.get(position)
+            val id_pasien_terpilih:String = id.get(position)
             val pindah:Intent = Intent(ini, Pasien_ubah::class.java)
-            pindah.putExtra("id_pasien_terpilih", id_dokter_terpilih)
+            pindah.putExtra("id_pasien_terpilih", id_pasien_terpilih)
             ini.startActivity(pindah)
         }
     }

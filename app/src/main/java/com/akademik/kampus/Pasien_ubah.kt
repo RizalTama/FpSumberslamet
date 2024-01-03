@@ -36,7 +36,7 @@ class Pasien_ubah : AppCompatActivity() {
             val ubah = dbfinalprojek.rawQuery("UPDATE pasien SET keluhan_pasien = '$keluhan_baru', nama_pasien =  '$nama_baru' WHERE id_pasien = '$id_pasien_terpilih'", null)
             ubah.moveToNext()
 
-            val pindah: Intent = Intent(this, Dokter::class.java )
+            val pindah: Intent = Intent(this, Pasien::class.java )
             startActivity(pindah)
         }
     }
