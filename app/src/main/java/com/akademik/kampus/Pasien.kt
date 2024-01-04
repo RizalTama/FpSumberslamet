@@ -52,7 +52,7 @@ class Pasien : AppCompatActivity() {
         }
 
         val mi = Pasien_item(this, id, nama, keluhan, foto)
-        rv_pasien.adapter=mi
+         rv_pasien.adapter=mi
         rv_pasien.layoutManager = GridLayoutManager(this, 2)
 
         val btn_tambah:Button = findViewById(R.id.btn_tambah)
